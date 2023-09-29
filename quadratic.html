@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic</title>
+</head>
+<body>
+    <b>A Quadratic equation in the form of ax^2 + bx + c </b>
+    <br><input id="a" type="number" placeholder="a"></br>
+    <br><input id="b" type="number" placeholder="b"></br>
+    <br><input id="c" type="number" placeholder="c"></br>
+    <br><button onclick="Answer()">Solve</button><br>
+
+    <script>
+        function Answer(){
+            const a = Number(document.getElementById('a').value);
+            const b = Number(document.getElementById('b').value);
+            const c = Number(document.getElementById('c').value);
+            
+            const B = b ** 2;
+            const D = B - ( 4 * a * c);
+
+            const X1 = -b + Math.sqrt(D) / 2 * a;
+            const X2 = -b - Math.sqrt(D) / 2 * a;            
+
+            console.log(X1, X2);
+        }
+    </script>
+</body>
+</html>
